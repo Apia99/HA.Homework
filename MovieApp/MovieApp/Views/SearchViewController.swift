@@ -12,6 +12,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     weak var delegate: ViewController!
     var searchResults: [Movie] = []
     
+    
     @IBOutlet weak var searchText: UITextField!
     
     @IBOutlet weak var tableView: UITableView!

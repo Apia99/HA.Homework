@@ -12,13 +12,6 @@ import CoreData
 
 class CoreDataManager {
     
-    /*
-     CORE DATA STACK
-     - context
-     - model
-     - coordinator
-     - storage
-     */
     
     static let shared = CoreDataManager()
     private init() { }

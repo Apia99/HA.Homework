@@ -16,9 +16,10 @@ extension CDMovie {
         let originalTitle = self.title ?? ""
         let overview = self.overview ?? ""
         let releaseDate = self.releaseDate ?? ""
+        let isFav = self.isFav
         
         return Movie(id: id, originalTitle: originalTitle, releaseDate: releaseDate, backdropPath: backdropPath ,
-                     overview: overview, genreIds: nil)
+                     overview: overview, genreIds: nil, isFav: isFav)
     }
     
 }

@@ -182,8 +182,6 @@ class MovieDataModel {
         
         let request: NSFetchRequest<CDMovie> = CDMovie.fetchRequest()
         let predicateTitle = NSPredicate(format: "title CONTAINS[c] %@", searchText)
-//        let predicateOverview = NSPredicate(format: "overview CONTAINS[c] %@", searchText)
-//        let predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicateTitle, predicateOverview])
         let predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [predicateTitle])
         request.predicate = predicate
         

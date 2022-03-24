@@ -12,14 +12,6 @@ class DetailViewController: UIViewController {
     var viewModel: MovieDataModel?
     private var subscribers = Set<AnyCancellable>()
     
-    // UI elements
-//    private lazy var mainStackView: UIStackView = {
-//        let stackView = UIStackView()
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.axis = .vertical
-//        return stackView
-//    }()
-    
     private lazy var headerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -95,10 +87,6 @@ class DetailViewController: UIViewController {
         headerStackView.addArrangedSubview(movieImageView)
         headerStackView.addArrangedSubview(descriptionStackView)
         
-//        mainStackView.addArrangedSubview(headerStackView)
-//        mainStackView.addArrangedSubview(companyTitleLabel)
-//        mainStackView.addArrangedSubview(collectionView)
-        
         view.addSubview(headerStackView)
         view.addSubview(companyTitleLabel)
         view.addSubview(collectionView)
@@ -106,10 +94,6 @@ class DetailViewController: UIViewController {
         // constraints
         let safeArea = view.safeAreaLayoutGuide
         
-//        mainStackView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-//        mainStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
-//        mainStackView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
-//        mainStackView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor).isActive = true
         
         headerStackView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
         headerStackView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true

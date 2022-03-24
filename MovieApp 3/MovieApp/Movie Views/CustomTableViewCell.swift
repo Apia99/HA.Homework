@@ -52,6 +52,5 @@ class CustomTableViewCell: UITableViewCell {
         
     }
 
-//    var userTapOnDetailsButton: () -> Void = { }
 
         

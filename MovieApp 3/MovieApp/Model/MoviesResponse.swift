@@ -25,6 +25,7 @@ struct Movie: Codable {
     let voteAverage: Double
     let voteCount: Int
     let productionCompanies: [Company]?
+    var isFav: Bool = false
 
 
     enum CodingKeys: String, CodingKey {
@@ -42,13 +43,14 @@ struct Movie: Codable {
         case productionCompanies = "production_companies"
     }
     
-    init(id: Int, originalTitle: String, releaseDate: String, backdropPath: String, overview: String, genreIds: [Int]? ) {
+    init(id: Int, originalTitle: String, releaseDate: String, backdropPath: String, overview: String, genreIds: [Int]?,isFav: Bool ) {
         self.id = id
         self.originalTitle = originalTitle
         self.releaseDate = releaseDate
         self.backdropPath = backdropPath
         self.overview = overview
         self.productionCompanies = nil
+        self.isFav = isFav
         self.adult = false
         self.genreIDS = []
         self.popularity = 0.0
